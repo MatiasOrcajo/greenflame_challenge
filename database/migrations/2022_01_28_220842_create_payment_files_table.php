@@ -29,7 +29,7 @@ class CreatePaymentFilesTable extends Migration
             $table->float('gross_amount', 15, 2)->nullable();
             $table->float('net_amount', 15, 2)->nullable();
             $table->integer('abg_user_id')->nullable();
-            $table->string('comments', 1000);
+            $table->string('comments', 1000)->nullable();
             $table->timestamps();
         });
     }

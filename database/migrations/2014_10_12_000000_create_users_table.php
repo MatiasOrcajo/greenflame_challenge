@@ -18,7 +18,10 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('last_name')->nullable();
-            $table->string('email')->unique();
+            // saco el unique de email por motivos de crear un usuario con el cual poder ingresar
+            // podria crear otra tabla para el loguin de admin
+            // pero no quiero crear tablas que no se me indicaron
+            $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('photo')->nullable();
@@ -29,16 +32,6 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
-
-
-        $user = new \App\Models\User;
-        // $user->organization_id = 1;
-        // $user->name = 'admin';
-        // $user->last_name = 'admin';
-        // $user->email = 'admin@admin.com';
-        // $user->password =  Hash::make('admin123**');
-        // $user->active = Constants::ACTIVE;
-        // $user->save();
     }
 
     /**

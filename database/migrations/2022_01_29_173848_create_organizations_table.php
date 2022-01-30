@@ -37,6 +37,17 @@ class CreateOrganizationsTable extends Migration
         });
 
 
+        // $organizations = ['LT Rental Car Division', 'Viajes Alkasa', 'Rentas y Servicios', 'LQ Representaciones'];
+
+        // for($i = 0; $i < count($organizations); $i++)
+        // {
+        //     $organization = new \App\Models\Organization;
+        //     $organization->name = $organizations[$i];
+            
+        // }
+        
+        
+
         // $organization = new \App\Models\User;
         // $user->organization_id = 1;
         // $user->name = 'admin';

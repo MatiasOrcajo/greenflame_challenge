@@ -15,10 +15,10 @@ class UserFactory extends Factory
     public function definition()
     {
         return [
-            'organization_id'=>mt_rand(1, 50),
+            'organization_id'=>mt_rand(1, 4),
             'name' => $this->faker->name(),
             'last_name'=>$this->faker->lastName,
-            'email' => $this->faker->unique()->safeEmail(),
+            'email' => 'prueba@prueba.com',
             'email_verified_at' => now(),
             'password' => 'password',
             'active'=>'1',
