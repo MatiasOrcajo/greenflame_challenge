@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class AddGsaOrganizationIdToVouchers extends Migration
+class AddOrganizationIdToUsers extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,9 @@ class AddGsaOrganizationIdToVouchers extends Migration
      */
     public function up()
     {
-        Schema::table('vouchers', function (Blueprint $table) {
-            $table->unsignedBigInteger('gsa_organization_id')->after('booking_id');
-            $table->foreign('gsa_organization_id')->references('id')->on('organizations');
+        Schema::table('users', function (Blueprint $table) {
+            $table->unsignedBigInteger('organization_id')->after('id')->default(null);
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
         });
     }
 
@@ -26,7 +26,7 @@ class AddGsaOrganizationIdToVouchers extends Migration
      */
     public function down()
     {
-        Schema::table('vouchers', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }

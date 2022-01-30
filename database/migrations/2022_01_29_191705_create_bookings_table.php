@@ -51,11 +51,11 @@ class CreateBookingsTable extends Migration
             $table->string('dropoff_date')->nullable();
             $table->string('pickup_time')->nullable();
             $table->string('rate')->nullable();
-            $table->decimal('base_rate')->nullable();
-            $table->decimal('base_rate_with_taxes')->nullable();
-            $table->decimal('taxes_total')->nullable();
-            $table->decimal('equipment_total')->nullable();
-            $table->decimal('estimated_total_amount')->nullable();
+            $table->float('base_rate')->nullable();
+            $table->float('base_rate_with_taxes')->nullable();
+            $table->float('taxes_total')->nullable();
+            $table->float('equipment_total')->nullable();
+            $table->float('estimated_total_amount')->nullable();
             $table->text('taxes')->nullable();
             $table->tinyInteger('manual_voucher');
             $table->date('issue_date'); 

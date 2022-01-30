@@ -33,12 +33,12 @@ class CreateUsersTable extends Migration
 
         $user = new \App\Models\User;
         // $user->organization_id = 1;
-        $user->name = 'admin';
-        $user->last_name = 'admin';
-        $user->email = 'admin@admin.com';
-        $user->password =  Hash::make('admin123**');
-        $user->active = Constants::ACTIVE;
-        $user->save();
+        // $user->name = 'admin';
+        // $user->last_name = 'admin';
+        // $user->email = 'admin@admin.com';
+        // $user->password =  Hash::make('admin123**');
+        // $user->active = Constants::ACTIVE;
+        // $user->save();
     }
 
     /**

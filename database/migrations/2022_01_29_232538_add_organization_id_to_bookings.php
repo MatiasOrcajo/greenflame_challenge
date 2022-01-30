@@ -15,7 +15,7 @@ class AddOrganizationIdToBookings extends Migration
     {
         Schema::table('bookings', function (Blueprint $table) {
             $table->unsignedBigInteger('organization_id')->nullable()->after('user_id');
-            $table->foreign('organization_id')->references('id')->on('organizations')->ondelete('cascade');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
         });
     }
 

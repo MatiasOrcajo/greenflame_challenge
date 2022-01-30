@@ -15,8 +15,8 @@ class CreateVouchersTable extends Migration
     {
         Schema::create('vouchers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('user_id')->nullable();
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('iata_code');
             $table->string('number')->nullable();
             $table->unsignedBigInteger('voucher_status_id');
@@ -26,17 +26,17 @@ class CreateVouchersTable extends Migration
             $table->foreign('payment_file_id')->references('id')->on('payment_files');
             $table->tinyInteger('past_due');
             $table->string('account');
-            $table->decimal('booking_base_rate');
-            $table->decimal('booking_taxes');
-            $table->decimal('booking_total');
-            $table->decimal('gross_amount');
-            $table->decimal('gsa_comission_rate');
+            $table->float('booking_base_rate');
+            $table->float('booking_taxes');
+            $table->float('booking_total');
+            $table->float('gross_amount');
+            $table->float('gsa_comission_rate');
             $table->tinyInteger('gsa_taxes_included');
-            $table->decimal('gsa_comission_amount');
-            $table->decimal('agency_comission_rate')->nullable();
+            $table->float('gsa_comission_amount');
+            $table->float('agency_comission_rate')->nullable();
             $table->tinyInteger('agency_taxes_included')->nullable();
-            $table->decimal('agency_comission_amount')->nullable();
-            $table->decimal('abg_net_amount');
+            $table->float('agency_comission_amount')->nullable();
+            $table->float('abg_net_amount');
             $table->date('issue_date');
             $table->string('agency_file_number')->nullable();
             $table->integer('net_rate');

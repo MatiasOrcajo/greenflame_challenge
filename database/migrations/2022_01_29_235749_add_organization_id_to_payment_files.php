@@ -15,7 +15,7 @@ class AddOrganizationIdToPaymentFiles extends Migration
     {
         Schema::table('payment_files', function (Blueprint $table) {
             $table->unsignedBigInteger('organization_id')->after('user_id');
-            $table->foreign('organization_id')->references('id')->on('organizations')->ondelete('cascade');
+            $table->foreign('organization_id')->references('id')->on('organizations')->onDelete('cascade');
         });
     }
 

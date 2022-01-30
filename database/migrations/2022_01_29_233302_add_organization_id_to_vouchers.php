@@ -14,7 +14,7 @@ class AddOrganizationIdToVouchers extends Migration
     public function up()
     {
         Schema::table('vouchers', function (Blueprint $table) {
-            $table->unsignedBigInteger('organization_id')->after('gsa_organization_id');
+            $table->unsignedBigInteger('organization_id');
             $table->foreign('organization_id')->references('id')->on('organizations');
         });
     }

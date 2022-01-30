@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Voucher extends Model
+class PaymentFileStatus extends Model
 {
-    protected $fillable = ['user_id'];
-
     use HasFactory;
-    
+
+    protected $table = 'payment_file_status';
 }

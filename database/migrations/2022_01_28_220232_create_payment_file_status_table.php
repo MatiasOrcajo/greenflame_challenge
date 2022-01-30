@@ -16,7 +16,7 @@ class CreatePaymentFileStatusTable extends Migration
         Schema::create('payment_file_status', function (Blueprint $table) {
             $table->id();
             $table->string('name', 100);
-            $table->integer('display_order');
+            $table->integer('display_order')->nullable();
             $table->timestamps();
         });
     }

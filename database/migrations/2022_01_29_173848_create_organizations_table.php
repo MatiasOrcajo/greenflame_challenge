@@ -32,7 +32,7 @@ class CreateOrganizationsTable extends Migration
             $table->tinyInteger('active');
             $table->tinyInteger('promos_active');
             $table->tinyInteger('notify_past_due');
-            $table->decimal('latitude')->nullable();
+            $table->float('latitude')->nullable();
             $table->timestamps();
         });
 

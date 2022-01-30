@@ -18,8 +18,8 @@ class CreateCompaniesTable extends Migration
             $table->string('name', 100);
             $table->integer('display_order');
             $table->tinyInteger('active');
-            $table->string('logo', 200);
-            $table->string('icon', 200);
+            $table->string('logo')->nullable();
+            $table->string('icon')->nullable();
             $table->timestamps();
         });
     }

@@ -16,9 +16,9 @@ class CreatePaymentFilesTable extends Migration
         Schema::create('payment_files', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users')->ondelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->unsignedBigInteger('payment_file_status_id');
-            $table->foreign('payment_file_status_id')->references('id')->on('payment_file_status')->ondelete('cascade');
+            $table->foreign('payment_file_status_id')->references('id')->on('payment_file_status')->onDelete('cascade');
             $table->unsignedBigInteger('company_id');
             $table->foreign('company_id')->references('id')->on('companies');
             $table->date('cycle_start');
@@ -26,8 +26,8 @@ class CreatePaymentFilesTable extends Migration
             $table->string('account', 50);
             $table->string('iata', 50)->nullable();
             $table->integer('vouchers_count')->nullable();
-            $table->decimal('gross_amount', 15, 2)->nullable();
-            $table->decimal('net_amount', 15, 2)->nullable();
+            $table->float('gross_amount', 15, 2)->nullable();
+            $table->float('net_amount', 15, 2)->nullable();
             $table->integer('abg_user_id')->nullable();
             $table->string('comments', 1000);
             $table->timestamps();
