@@ -14,4 +14,8 @@ class Constants extends Model
     const INACTIVE = 0;
     const ACTIVE   = 1;
 
+
+    // *** past due ***
+    const PAST_DUE_TRUE = 1;
+
 }

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(VoucherStatusSeeder::class);
         $this->call(BookingSeeder::class);
-        $this->call(VoucherSeeder::class);
         $this->call(PaymentFileSeeder::class);
+        $this->call(VoucherSeeder::class);
     }
 }

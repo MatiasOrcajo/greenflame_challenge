@@ -14,6 +14,6 @@ class PaymentFileStatusSeeder extends Seeder
      */
     public function run()
     {
-        PaymentFileStatus::factory()->count(50)->create();
+        PaymentFileStatus::factory()->count(20)->create();
     }
 }

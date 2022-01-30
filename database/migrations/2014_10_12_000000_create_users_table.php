@@ -18,9 +18,7 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('last_name')->nullable();
-            // saco el unique de email por motivos de crear un usuario con el cual poder ingresar
-            // podria crear otra tabla para el loguin de admin
-            // pero no quiero crear tablas que no se me indicaron
+            // saco el unique de email por motivos de ejectuar el factory
             $table->string('email');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
@@ -32,6 +30,13 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
         });
+
+        $user = new \App\Models\User;
+        $user->name = 'admin';
+        $user->email = 'admin@admin.com';
+        $user->password = Hash::make('admin123');
+
+        $user->save();
     }
 
     /**

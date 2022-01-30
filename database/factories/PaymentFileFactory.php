@@ -16,7 +16,7 @@ class PaymentFileFactory extends Factory
         return [
             "user_id"=>mt_rand(1, 50),
             "organization_id"=>mt_rand(1, 4),
-            "payment_file_status_id"=>mt_rand(1, 50),
+            "payment_file_status_id"=>mt_rand(1, 20),
             "company_id"=>mt_rand(1, 50),
             "cycle_start"=>$this->faker->date($format = 'Y-m-d', $max = 'now'),
             "cycle_end"=>$this->faker->date($format = 'Y-m-d', $max = 'now'),

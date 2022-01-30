@@ -18,7 +18,7 @@ class UserFactory extends Factory
             'organization_id'=>mt_rand(1, 4),
             'name' => $this->faker->name(),
             'last_name'=>$this->faker->lastName,
-            'email' => 'prueba@prueba.com',
+            'email' => $this->faker->email,
             'email_verified_at' => now(),
             'password' => 'password',
             'active'=>'1',
