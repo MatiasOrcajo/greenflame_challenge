@@ -28,6 +28,8 @@ class VoucherFactory extends Factory
             "booking_taxes"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
             "booking_total"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
             "gross_amount"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
+            "gsa_amount"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
+            "abg_amount"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
             "gsa_comission_rate"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
             "gsa_taxes_included"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),
             "gsa_comission_amount"=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 50),

@@ -27,7 +27,10 @@
                                 <th scope="col">Past Due</th>
                                 <th scope="col">Payment File</th>
                                 <th scope="col">Customer's Last Name</th>
+                                <th scope="col">Confirmation</th>
                                 <th scope="col">Issue IATA</th>
+                                <th scope="col">Gross Amount</th>
+                                <th scope="col">GSA Net Amount</th>
                                 <th scope="col">ABG Net Amount</th>
                                 <th scope="col">User</th>
                                 <th scope="col">Create Date</th>
@@ -63,6 +66,30 @@
                                         @else
                                         {{"-"}}
                                         @endif
+                                    </th>
+                                    <th>
+                                        {{$voucher->booking->last_name}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->booking->number}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->iata_code}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->gross_amount}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->gsa_amount}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->abg_amount}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->user->name}}{{$voucher->user->last_name}}
+                                    </th>
+                                    <th>
+                                        {{$voucher->issue_date}}
                                     </th>
                                 </tr>
                                 @endforeach

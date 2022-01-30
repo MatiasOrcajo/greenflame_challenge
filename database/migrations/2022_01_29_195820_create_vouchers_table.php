@@ -30,6 +30,8 @@ class CreateVouchersTable extends Migration
             $table->float('booking_taxes');
             $table->float('booking_total');
             $table->float('gross_amount');
+            $table->float('gsa_amount');
+            $table->float('abg_amount');
             $table->float('gsa_comission_rate');
             $table->tinyInteger('gsa_taxes_included');
             $table->float('gsa_comission_amount');
